@@ -56,6 +56,15 @@ body {
     padding: 10px 20px;
     max-width: 500px;
   }
+
+  .header-title {
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+    .header-logo {
+    height: 80px;
+}
   
   .page-header {
     display: flex;
@@ -151,6 +160,16 @@ body {
       width: 213px;
       height: 23px;
     }
+
+    .header-title {
+        width: 80%;
+        margin-bottom: 5px;
+    }
+    
+        .header-logo {
+        height: 30px;
+    }
+      
   
     .page-header {
       margin: 20px 0;
@@ -200,6 +219,10 @@ body {
       padding: 5px 15px 0px 15px;
       width: 256px;
       height: 28.6px;
+    }
+
+    img.header-logo {
+        height: 100%;
     }
   
     nav {
