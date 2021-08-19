@@ -7,12 +7,14 @@ body {
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
     min-height: 100vh;
+    color: rgb(255, 85, 85);
+    background-color: #282a36;
   }
   
   header {
     width: 100%;
-    background: rgba(104, 197, 248, .9);
-    border-bottom: rgb(36, 116, 248) solid 2px;
+    background: rgba(255, 85, 85, .9);
+    border-bottom: rgb(255, 121, 198) solid 2px;
   }
   
   nav {
@@ -31,13 +33,12 @@ body {
   
   nav a {
     text-decoration: none;
-    color: #101010;
     font-weight: 600;
   }
   
   nav a:hover {
     text-decoration: none;
-    color: rgb(16, 56, 158);
+    color: rgb(98, 114, 164)
   }
   
   nav ul {
@@ -79,7 +80,6 @@ body {
     border-width: 2px;
     border-style: solid;
     text-decoration: none;
-    background-color: white;
     font-weight: 600;
     cursor: pointer;
     font-family: inherit;
@@ -87,12 +87,12 @@ body {
   }
   
   .btn:hover {
-    background-color: #d2d2d2;
+    background-color: rgb(255, 85, 85);
   }
   
   .submit {
-    color: green;
-    border-color: green;
+    color: #50fa7b;
+    border-color: #50fa7b;
   }
   
   .secondary {
@@ -101,13 +101,13 @@ body {
   }
   
   .warn {
-    color: rgb(255, 102, 0);
-    border-color: rgb(255, 102, 0);
+    color: #ffb86c;
+    border-color: #ffb86c;
   }
   
   .danger {
-    color: crimson;
-    border-color: crimson;
+    color: rgb(255, 121, 198);
+    border-color: rgb(255, 121, 198);
   }
   
   .page-header h1 {
@@ -190,7 +190,7 @@ body {
   
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
       header {
-        background: rgba(104, 197, 248, .7);
+        background: rgba(255, 85, 85, 0.7);
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
       }
@@ -210,8 +210,8 @@ body {
     nav,
     .header-logo-container {
       margin: 0;
-      background: rgba(104, 197, 248, .9);
-      border: rgb(36, 116, 248) solid 2px;
+      background: rgb(255, 85, 85);
+      border: rgb(255, 85, 85) solid 2px;
       border-radius: 18px;
     }
   
@@ -239,7 +239,7 @@ body {
   
       nav,
       .header-logo-container {
-        background: rgba(104, 197, 248, .6);
+        background: rgba(255, 121, 198, 0.7);
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
       }

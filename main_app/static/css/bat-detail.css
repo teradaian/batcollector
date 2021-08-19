@@ -82,7 +82,7 @@
   .feedings-toy-container > section {
     width: 80%;
     min-width: 315px;
-    border: rgb(36, 116, 248) solid 2px;
+    border: rgb(255, 85, 85) solid 2px;
     border-radius: 6px;
     padding: 10px;
     box-shadow: 5px 5px 6px -1px #AAA;
@@ -139,7 +139,7 @@
   .feedings th {
     font-size: 1.1rem;
     padding: 5px 5px 0;
-    border-bottom: rgb(36, 116, 248) solid 2px;;
+    border-bottom: rgb(255, 85, 85) solid 2px;;
   }
   
   .feedings tr:nth-child(even) {
