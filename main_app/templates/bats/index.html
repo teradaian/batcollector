@@ -15,7 +15,7 @@
 <section class="card-container">
   {% for bat in bats %}
     <div class="card">
-     <a href="/bats/{{ bat.id }}">
+     <a href="{% url 'bat_details' bat.id %}">
       <div class="card-content">
         <div class="card-img-container">
           <img 
