@@ -1,20 +1,5 @@
 from django.shortcuts import render
-
-
-class Bat: 
-  def __init__(self, name, breed, description, age):
-    self.name = name
-    self.breed = breed
-    self.description = description
-    self.age = age
-
-bats = [
-  Bat('Lolo', 'tabby', 'Kinda rude.', 3),
-  Bat('Sachi', 'tortoiseshell', 'Looks like a turtle.', 0),
-  Bat('Fancy', 'bombay', 'Happy fluff ball.', 4),
-  Bat('Bonk', 'selkirk rex', 'Meows loudly.', 6)
-]
-
+from .models import Bat
 
 
 def home(request):
@@ -24,4 +9,9 @@ def about(request):
   return render(request, 'about.html')
 
 def bats_index(request):
+  bats = Bat.objects.all()
   return render(request, 'bats/index.html', { 'bats': bats })
+
+def bat_details(request, bat_id):
+  bat = Bat.objects.get(id=bat_id)
+  return render(request, 'bats/detail.html', { 'bat': bat })

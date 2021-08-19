@@ -15,11 +15,12 @@
 <section class="card-container">
   {% for bat in bats %}
     <div class="card">
+     <a href="/bats/{{ bat.id }}">
       <div class="card-content">
         <div class="card-img-container">
           <img 
             src="{% static 'images/splash.png' %}" 
-            alt="A skater boy cat"
+            alt="A cuddly widdle vampire"
             class="bat-img"
           >
         </div>
