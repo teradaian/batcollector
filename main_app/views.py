@@ -5,7 +5,7 @@ from .models import Bat
 class BatCreate(CreateView):
   model = Bat
   fields = '__all__'
-
+  success_url = '/bats/'
 
 
 def home(request):
