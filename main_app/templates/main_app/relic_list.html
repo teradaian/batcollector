@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block head %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/relic-index.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>All Relics</h1>
+  <img src="{% static 'images/string.svg' %}" alt="evil stuff" />
+  <img src="{% static 'images/mouse.svg' %}" alt="more evil stuff" />
+  <img src="{% static 'images/post.svg' %}" alt="evilest stuff" />
+  <img src="{% static 'images/fish.svg' %}" alt="super evil" />
+</section>
+
+<section class="card-container">
+  {% for relic in relic_list %}
+  <div class="card" style="border-color: {{ relic.color }}">
+    <div class="card-bg" style="background-color: {{ relic.color }}"></div>
+    <a href="{% url 'toys_detail' toy.id %}">
+      <div class="card-content">
+        <h2>{{ relic.name }}</h2>
+        <p>A {{ relic.color }} relic of unholy power</p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock %}

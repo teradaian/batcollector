@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Bat, Relic
 from .forms import FeedingForm
@@ -19,6 +20,12 @@ class BatDelete(DeleteView):
 class RelicCreate(CreateView):
   model = Relic
   fields = '__all__'
+
+class RelicList(ListView):
+  model = Relic
+
+class RelicDetail(DetailView):
+  model = Relic
 
 def home(request):
   return render(request, 'home.html')
