@@ -49,12 +49,8 @@
     <div class="subsection-title">
       <h2>Feedings</h2>
       <img 
-        src="{% static 'images/cat-cone.svg' %}" 
-        alt="blood"
-      />
-      <img 
-        src="{% static 'images/cat-cone.svg' %}" 
-        alt="fruit"
+        src="{% static 'images/blood.png' %}" 
+        alt="blooddrop"
       />
     </div>
     <h3>Add a Feeding</h3>
@@ -64,9 +60,9 @@
       class="subsection-section"
     >
       {% if cat.fed_for_today %}
-        <p class="fed">{{cat.name}} is satiated. For now...</p>
+        <p class="fed">{{cat.name}} Satiated. For now...</p>
       {% else %}
-        <p class="unfed">{{cat.name}} hungers for blood</p>
+        <p class="unfed">{{cat.name}} Hungry for blood</p>
       {% endif %}
       {% csrf_token %}
       {{ feeding_form.as_p }}
@@ -88,7 +84,7 @@
       </tbody>
     </table>
      {% else %}
-      <p class="subsection-section">{{bat.name}} is hungry for blood</p>
+      <p class="subsection-section">{{bat.name}} has never tasted the sweet nectar of the vein</p>
     {% endif %}
   </section>
 </div>
