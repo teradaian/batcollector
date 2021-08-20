@@ -2,7 +2,9 @@
 {% load static %}
 
 {% block head %}
+<script src="https://unpkg.com/vanilla-picker@2"></script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}"/>
+<script defer src="{% static 'js/relic-detail.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -19,6 +21,7 @@
   <table>
     {{ form.as_table }}
   </table>
+  <div id="parent">Select Color</div>
   <button type="submit" class="btn submit">Submit!</button>
 </form>
 
