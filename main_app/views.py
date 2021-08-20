@@ -27,4 +27,5 @@ def bats_index(request):
 
 def bat_details(request, bat_id):
   bat = Bat.objects.get(id=bat_id)
-  return render(request, 'bats/detail.html', { 'bat': bat })
+  feeding_form = FeedingForm()
+  return render(request, 'bats/detail.html', { 'bat': bat, 'feeding_form': feeding_form })
