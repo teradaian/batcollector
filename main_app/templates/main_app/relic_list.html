@@ -23,7 +23,7 @@
   {% for relic in relic_list %}
   <div class="card" style="border-color: {{ relic.color }}">
     <div class="card-bg" style="background-color: {{ relic.color }}"></div>
-    <a href="{% url 'toys_detail' toy.id %}">
+    <a href="{% url 'relics_detail' relic.id %}">
       <div class="card-content">
         <h2>{{ relic.name }}</h2>
         <p>A {{ relic.color }} relic of unholy power</p>

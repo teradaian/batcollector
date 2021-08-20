@@ -16,7 +16,7 @@ class Relic(models.Model):
     return self.name
 
   def get_absolute_url(self):
-    return reverse('relic_detail', kwargs={'pk': self.id})
+    return reverse('relics_detail', kwargs={'pk': self.id})
 
 class Bat(models.Model):
   name = models.CharField(max_length=100)
