@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Bat
 
 class BatCreate(CreateView):
@@ -7,6 +7,13 @@ class BatCreate(CreateView):
   fields = '__all__'
   success_url = '/bats/'
 
+class BatUpdate(UpdateView):
+  model = Bat
+  fields = ['description', 'age']
+
+class BatDelete(DeleteView):
+  model = Bat
+  success_url = '/bats/'
 
 def home(request):
   return render(request, 'home.html')
