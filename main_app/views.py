@@ -27,6 +27,14 @@ class RelicList(ListView):
 class RelicDetail(DetailView):
   model = Relic
 
+class RelicUpdate(UpdateView):
+  model = Relic
+  fields = ['name', 'color']
+
+class RelicDelete(DeleteView):
+  model = Relic
+  success_url = '/relics/'
+
 def home(request):
   return render(request, 'home.html')
 

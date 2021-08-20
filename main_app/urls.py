@@ -10,9 +10,12 @@ urlpatterns = [
   path('bats/<int:pk>/update/', views.BatUpdate.as_view(), name='bats_update'),
   path('bats/<int:pk>/delete/', views.BatDelete.as_view(), name='bats_delete'),
   path('bats/<int:bat_id>/add_feeding/', views.add_feeding, name='add_feeding'),
+
   path('relics/create/', views.RelicCreate.as_view(), name='relics_create'),
   path('relics/<int:pk>/', views.RelicDetail.as_view(), name='relics_detail'),
   path('relics/', views.RelicList.as_view(), name='relics_index'),
+  path('relics/<int:pk>/update/', views.RelicUpdate.as_view(), name='relics_update'),
+  path('relics/<int:pk>/delete/', views.RelicDelete.as_view(), name='relics_delete'),
 ]
 
 
