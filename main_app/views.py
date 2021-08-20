@@ -37,4 +37,4 @@ def add_feeding(request, bat_id):
     new_feeding = form.save(commit=False)
     new_feeding.bat_id = bat_id
     new_feeding.save()
-  return redirect('bats_detail', bat_id=bat_id)
+  return redirect('bat_details', bat_id=bat_id)

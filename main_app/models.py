@@ -27,6 +27,9 @@ class Feeding(models.Model):
     default=MEALS[0][0]
   )
 
+  class Meta:
+    ordering = ['-date']
+
   bat = models.ForeignKey(Bat, on_delete=models.CASCADE)
 
   def __str__(self):

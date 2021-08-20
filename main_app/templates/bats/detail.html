@@ -68,6 +68,7 @@
       <button type="submit" class="btn submit">Add Feeding</button>
     </form>
     <h3>Past Feedings</h3>
+     {% if bat.feeding_set.all.count %}
     <table>
       <thead>
         <tr><th>Date</th><th>Meal</th></tr>
@@ -81,6 +82,9 @@
         {% endfor %}
       </tbody>
     </table>
+     {% else %}
+      <p class="subsection-section">{{bat.name}} is hungry for blood</p>
+    {% endif %}
   </section>
 </div>
 
