@@ -7,10 +7,16 @@
 
 {% block content %}
 
+{% if object %}
+    <h1>Edit {{object.name}}</h1>
+{% else %}
+
 <div class="page-header">
   <h1>Add a Bat</h1>
   <img src="{% static 'images/smallbat.png' %}" alt="friendlybat"/>
 </div>
+
+{% endif %}
 <form action="" method="post" class="form-container">
   {% csrf_token %}
   <table>
