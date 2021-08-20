@@ -63,6 +63,11 @@
       method="post" 
       class="subsection-section"
     >
+      {% if cat.fed_for_today %}
+        <p class="fed">{{cat.name}} is satiated. For now...</p>
+      {% else %}
+        <p class="unfed">{{cat.name}} hungers for blood</p>
+      {% endif %}
       {% csrf_token %}
       {{ feeding_form.as_p }}
       <button type="submit" class="btn submit">Add Feeding</button>
