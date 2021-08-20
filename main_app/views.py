@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Bat
+from .models import Bat, Relic
 from .forms import FeedingForm
 
 class BatCreate(CreateView):
@@ -15,6 +15,10 @@ class BatUpdate(UpdateView):
 class BatDelete(DeleteView):
   model = Bat
   success_url = '/bats/'
+
+class RelicCreate(CreateView):
+  model = Relic
+  fields = '__all__'
 
 def home(request):
   return render(request, 'home.html')
