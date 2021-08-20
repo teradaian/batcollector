@@ -1,5 +1,11 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Bat
+
+class BatCreate(CreateView):
+  model = Bat
+  fields = '__all__'
+
 
 
 def home(request):
