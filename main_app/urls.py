@@ -7,7 +7,8 @@ urlpatterns = [
   path('bats/', views.bats_index, name='bats_index'),
   path('bats/<int:bat_id>/', views.bat_details, name='bat_details'),
   path('bats/create/', views.BatCreate.as_view(), name='bats_create'),
-  
+  path('bats/<int:pk>/update/', views.BatUpdate.as_view(), name='bats_update'),
+  path('bats/<int:pk>/delete/', views.BatDelete.as_view(), name='bats_delete'),
 ]
 
 

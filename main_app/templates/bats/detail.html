@@ -27,6 +27,10 @@
       <h2>A {{ bat.breed }} kitten.</h2>
     {% endif %}
     <p>{{ bat.description }}</p>
+        <div class="bat-actions">
+      <a href="{% url 'bats_update' bat.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'bats_delete' bat.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 
