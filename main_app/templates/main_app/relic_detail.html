@@ -15,7 +15,9 @@
   <div class="card-bg" style="background-color: {{ relic.color }}"></div>
   <div class="card-content">
     <h2>{{ relic.name }}</h2>
-    <p>A {{ relic.color }} relic of unholy power</p>
+    {% load convert %}
+    {% get_colour_name (165,42,42) as rgb_tuple %}
+    <p>A {{ get_colour_name.closest_name }} relic of unholy power</p>
   </div>
 </div>
 <a href="{% url 'relics_update' relic.id %}" class="btn warn">Edit</a>

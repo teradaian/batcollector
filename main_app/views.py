@@ -57,3 +57,5 @@ def add_feeding(request, bat_id):
     new_feeding.bat_id = bat_id
     new_feeding.save()
   return redirect('bat_details', bat_id=bat_id)
+
+  
