@@ -33,6 +33,14 @@
     justify-content: flex-end;
     flex-direction: column;
   }
+
+  .card-banner {
+    background-color: rgba(245, 245, 245, .7);
+    padding: 5px;
+    min-height: 88px;
+    border-radius: 5px;
+    z-index: 2;
+  }
   
   .card > a {
     position: absolute;

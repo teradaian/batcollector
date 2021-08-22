@@ -31,7 +31,14 @@ main {
     align-items: flex-end;
     justify-content: flex-end;
     flex-direction: column;
-    color: #111;
+    color: #44475a
+  }
+
+  .card-banner {
+    background-color: rgba(245, 245, 245, .9);
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 2;
   }
   
   .btn {
