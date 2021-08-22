@@ -35,6 +35,10 @@ body {
     text-decoration: none;
     font-weight: 600;
   }
+
+  nav a:visited {
+    color: black;
+  }
   
   nav a:hover {
     text-decoration: none;
@@ -87,12 +91,13 @@ body {
   }
   
   .btn:hover {
-    background-color: rgb(255, 85, 85);
+    background-color: rgb(98, 114, 164);
   }
   
   .submit {
     color: #50fa7b;
     border-color: #50fa7b;
+    background-color: transparent;
   }
   
   .secondary {
@@ -239,7 +244,6 @@ body {
   
       nav,
       .header-logo-container {
-        background: rgba(255, 121, 198, 0.7);
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
       }

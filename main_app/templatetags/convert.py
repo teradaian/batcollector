@@ -4,7 +4,6 @@ from django import template
 register = template.Library()
 
 def closest_colour(requested_colour):
-    print(requested_colour)
     s = requested_colour[4:]
     req_color = eval(s)
     min_colours = {}

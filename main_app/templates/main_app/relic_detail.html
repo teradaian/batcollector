@@ -16,8 +16,7 @@
   <div class="card-content">
     <h2>{{ relic.name }}</h2>
     {% load convert %}
-    {% get_colour_name relic.color %}
-    <p>A {{ get_colour_name.closest_name }} relic of unholy power</p>
+    <p>A {% get_colour_name relic.color %} relic of unholy power</p>
   </div>
 </div>
 <a href="{% url 'relics_update' relic.id %}" class="btn warn">Edit</a>
