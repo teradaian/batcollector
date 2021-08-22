@@ -16,7 +16,7 @@
   <div class="card-content">
     <h2>{{ relic.name }}</h2>
     {% load convert %}
-    {% get_colour_name (165,42,42) as requested_colour %}
+    {% get_colour_name relic.color %}
     <p>A {{ get_colour_name.closest_name }} relic of unholy power</p>
   </div>
 </div>
