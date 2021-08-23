@@ -34,12 +34,12 @@
     {% if bat.age > 0 %}
       <h2>A {{ bat.age }} year old {{ bat.breed }}</h2>
     {% else %}
-      <h2>A {{ bat.breed }} kitten.</h2>
+      <h2>A {{ bat.breed }} eternal being.</h2>
     {% endif %}
     <p>{{ bat.description }}</p>
         <div class="bat-actions">
-      <a href="{% url 'bats_update' bat.id %}" class="btn warn">Edit</a>
-      <a href="{% url 'bats_delete' bat.id %}" class="btn danger">Delete</a>
+      <a href="{% url 'bats_update' bat.id %}" class="btn warn">Edit <i class="far fa-edit"></i></a>
+      <a href="{% url 'bats_delete' bat.id %}" class="btn danger">Delete <i class="far fa-trash-alt"></i></a>
     </div>
   </div>
 </section>
@@ -66,7 +66,7 @@
       {% endif %}
       {% csrf_token %}
       {{ feeding_form.as_p }}
-      <button type="submit" class="btn submit">Add Feeding</button>
+      <button type="submit" class="btn submit">Add Feeding <i class="fas fa-tint"></i></button>
     </form>
     <h3>Past Feedings</h3>
      {% if bat.feeding_set.all.count %}
@@ -130,7 +130,7 @@
             </a>
             <form action="{% url 'assoc_relic' bat.id relic.id %}" method="post">
               {% csrf_token %}
-              <button type="submit" class="btn submit">Claim Relic</button>
+              <button type="submit" class="btn submit">Claim Relic <i class="far fa-gem"></i></button>
             </form>
           </div>
         {% endfor %}

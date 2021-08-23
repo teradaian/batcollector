@@ -21,7 +21,7 @@
     </div>
   </div>
 </div>
-<a href="{% url 'relics_update' relic.id %}" class="btn warn">Edit</a>
-<a href="{% url 'relics_delete' relic.id %}" class="btn danger">Delete</a>
+<a href="{% url 'relics_update' relic.id %}" class="btn warn">Edit <i class="far fa-edit"></i></a>
+<a href="{% url 'relics_delete' relic.id %}" class="btn danger">Delete <i class="far fa-trash-alt"></i></a>
 
 {% endblock %}
