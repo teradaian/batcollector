@@ -115,6 +115,27 @@
     </div>
     <h3>Available Relics</h3>
     <div class="subsection-section">
+      {% if relics.count %}
+        {% for relic in relics.all %}
+          <div class="relic-container">
+            <div 
+              class="color-block"
+              style="background-color: {{ relic.color }}"
+            ></div>
+            <a href="{% url 'relics_detail' relic.id %}">
+              <p>A {{ relic.color }} {{ relic.name }}</p>
+            </a>
+            <form action="" method="post">
+              {% csrf_token %}
+              <button type="submit" class="btn submit">Claim Relic</button>
+            </form>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="all-relics">
+          {{bat.name}} has ammassed all available relics
+        </p>
+      {% endif %}
     </div>
   </section>
 </div>
