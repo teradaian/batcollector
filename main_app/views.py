@@ -47,7 +47,7 @@ def bats_index(request):
 
 def bat_details(request, bat_id):
   bat = Bat.objects.get(id=bat_id)
-  relics_bat_doesnt_have = Relic.objects.exclude(id__in = bat.toys.all().values_list('id'))
+  relics_bat_doesnt_have = Relic.objects.exclude(id__in = bat.relics.all().values_list('id'))
   feeding_form = FeedingForm()
   return render(request, 'bats/detail.html', { 'bat': bat, 'feeding_form': feeding_form, 'relics': relics_bat_doesnt_have })
 
@@ -59,4 +59,7 @@ def add_feeding(request, bat_id):
     new_feeding.save()
   return redirect('bat_details', bat_id=bat_id)
 
+def assoc_relic(request, bat_id, relic_id):
+  Bat.objects.get(id=bat_id).relics.add(relic_id)
+  return redirect('bat_details', bat_id=bat_id)
   

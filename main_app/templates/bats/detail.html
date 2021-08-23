@@ -44,7 +44,7 @@
   </div>
 </section>
 
-<div class="feedings-toy-container">
+<div class="feedings-relic-container">
   <section class="feedings">
     <div class="subsection-title">
       <h2>Feedings</h2>
@@ -59,10 +59,10 @@
       method="post" 
       class="subsection-section"
     >
-      {% if cat.fed_for_today %}
-        <p class="fed">{{cat.name}} Satiated. For now...</p>
+      {% if bat.fed_for_today %}
+        <p class="fed">{{bat.name}} Satiated. For now...</p>
       {% else %}
-        <p class="unfed">{{cat.name}} Hungry for blood</p>
+        <p class="unfed">{{bat.name}} Hungry for blood</p>
       {% endif %}
       {% csrf_token %}
       {{ feeding_form.as_p }}
@@ -103,14 +103,14 @@
               class="color-block"
               style="background-color: {{ relic.color }}"
             ></div>
-            <a href="{% url 'toys_detail' toy.id %}">
+            <a href="{% url 'relics_detail' relic.id %}">
             {% load convert %}
               <p>A {% get_colour_name relic.color %} {{ relic.name }}</p>
             </a>
           </div>
         {% endfor %}
       {% else %}
-        <p class="no-toys">{{bat.name}}'s treasure pile is depleted</p>
+        <p class="no-relics">{{bat.name}}'s treasure pile is depleted</p>
       {% endif %}
     </div>
     <h3>Available Relics</h3>
@@ -123,9 +123,10 @@
               style="background-color: {{ relic.color }}"
             ></div>
             <a href="{% url 'relics_detail' relic.id %}">
-              <p>A {{ relic.color }} {{ relic.name }}</p>
+            {% load convert %}
+              <p>A {% get_colour_name relic.color %} {{ relic.name }}</p>
             </a>
-            <form action="" method="post">
+            <form action="{% url 'assoc_relic' bat.id relic.id %}" method="post">
               {% csrf_token %}
               <button type="submit" class="btn submit">Claim Relic</button>
             </form>
