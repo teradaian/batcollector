@@ -1,8 +1,12 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.views import LoginView
 from .models import Bat, Relic
 from .forms import FeedingForm
+
+class Home(LoginView):
+  template_name = 'home.html'
 
 class BatCreate(CreateView):
   model = Bat
