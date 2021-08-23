@@ -87,6 +87,36 @@
       <p class="subsection-section">{{bat.name}} has never tasted the sweet nectar of the vein</p>
     {% endif %}
   </section>
+<section class="relics">
+    <div class="subsection-title">
+      <h2>Relics</h2>
+      <img src="{% static 'images/relic1.png' %}" alt="A cursed chalice" />
+      <img src="{% static 'images/relic2.png' %}" alt="A bejeweled cruxifix" />
+      <img src="{% static 'images/relic3.png' %}" alt="A large ring" />
+    </div>
+    <h3>{{ bat.name }}'s Relics</h3>
+    <div class="subsection-section">
+      {% if bat.relics.count %}
+        {% for relic in bat.relics.all %}
+          <div class="relic-container">
+            <div 
+              class="color-block"
+              style="background-color: {{ relic.color }}"
+            ></div>
+            <a href="{% url 'toys_detail' toy.id %}">
+            {% load convert %}
+              <p>A {% get_colour_name relic.color %} {{ relic.name }}</p>
+            </a>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="no-toys">{{bat.name}}'s treasure pile is depleted</p>
+      {% endif %}
+    </div>
+    <h3>Available Relics</h3>
+    <div class="subsection-section">
+    </div>
+  </section>
 </div>
 
 
