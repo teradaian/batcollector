@@ -6,7 +6,7 @@ from .forms import FeedingForm
 
 class BatCreate(CreateView):
   model = Bat
-  fields = '__all__'
+  fields = ['name', 'breed', 'description', 'age']
   success_url = '/bats/'
 
 class BatUpdate(UpdateView):
