@@ -17,6 +17,7 @@ urlpatterns = [
   path('relics/<int:pk>/update/', views.RelicUpdate.as_view(), name='relics_update'),
   path('relics/<int:pk>/delete/', views.RelicDelete.as_view(), name='relics_delete'),
   path('bats/<int:bat_id>/assoc_relic/<int:relic_id>/', views.assoc_relic, name='assoc_relic'),
+  path('accounts/signup/', views.signup, name='signup'),
 ]
 
 
